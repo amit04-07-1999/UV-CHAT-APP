@@ -1,0 +1,27 @@
+.body-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    background-color: #fcf957;
+    /* background-image: url("../../public/Images/chatBackground.png"); */
+}
+
+.img-3 {
+    margin-top: -150px;
+    height: 35rem;
+}
+
+.h1-3 {
+    margin-top: -100px;
+    color: black;
+}
+
+.h3-3 {
+    color: black;
+}
+
+.span-3 {
+    color: #fc0303;
+}

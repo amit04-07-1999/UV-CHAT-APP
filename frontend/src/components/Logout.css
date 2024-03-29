@@ -1,0 +1,30 @@
+.body-5 {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size:x-large;
+    font-weight: bold;
+    background-color: #a3a0a0;
+    height: 40px;
+    width:160px;
+    border-radius: 0.5rem;
+}
+.h4-5{
+    margin-left: 20px;
+}
+.logout-5 {
+    height: 40px;
+    width: 40px;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    margin-left: 20px;
+    /* font-size: 1.3rem; */
+    color: #ebe7ff;
+    cursor: pointer;
+}
+.logout-5:hover{
+    background-color:#d10000 ;
+    border-radius: 0.5rem;
+    /* color: #000000; */
+
+}

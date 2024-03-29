@@ -1,0 +1,78 @@
+.body-1 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background-color: #fcf957;
+    /* background-image: url("../../public/Images/chatBackground.png"); */
+}
+.brand-1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center; 
+}
+.img-1 {
+    height: 5rem;
+}
+.uv-1{
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.form-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fffc00;
+    border-radius: 2rem;
+    padding: 5rem;
+}
+
+.input-1 {
+    background-color: transparent;
+    padding: 1rem;
+    border: 0.1rem solid #000000;
+    border-radius: 0.4rem;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 1rem;
+}
+.input-1:focus {
+    border: 0.1rem solid #fffdfd;
+    outline: none;
+}
+
+.button-1 {
+    background-color: #000000;
+    color: white;
+    /* padding: 1rem 2rem; */
+    height: 50px;
+    width: 150px;
+    margin-left: 100px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.button-1:hover {
+    background-color: #fdfdfd;
+    color: black;
+    font-weight: bold;
+}
+
+.span-1 {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.link-1{
+    color: #4e0eff;
+    text-decoration: none;
+    font-weight: bold;
+}
