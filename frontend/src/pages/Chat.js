@@ -28,24 +28,43 @@ export default function Chat() {
   }, []);
   useEffect(() => {
     if (currentUser) {
-      socket.current = io(host);
+      socket.current = io(host, {
+        withCredentials: true,  // Ensure credentials are sent
+        extraHeaders: {
+          "my-custom-header": "value"  // Add any necessary headers
+        }
+      });
       socket.current.emit("add-user", currentUser._id);
+      socket.current.on("connect", () => {
+        console.log("Socket connected: ", socket.current.id);
+      });
+      socket.current.on("disconnect", () => {
+        console.log("Socket disconnected");
+      });
     }
   }, [currentUser]);
 
-  useEffect(async () => {
+
+  useEffect(() => {
     if (currentUser) {
       if (currentUser.isAvatarImageSet) {
-        const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
-        setContacts(data.data);
+        axios.get(`${allUsersRoute}/${currentUser._id}`)
+          .then(response => {
+            setContacts(response.data);
+          })
+          .catch(error => {
+            console.error('Error fetching contacts:', error);
+          });
       } else {
         navigate("/setAvatar");
       }
     }
   }, [currentUser]);
+
   const handleChatChange = (chat) => {
     setCurrentChat(chat);
   };
+  
   return (
     <>
       <div>
